@@ -1,0 +1,138 @@
+
+*{
+  font-family: "Rubik", sans-serif;
+}
+
+:root{
+    --dark-custom: #1D242D;
+    --grey-custom: rgb(132, 130, 128);
+    --accent-custom: #E31A0B;
+    --white-custom: rgb(234, 238, 242);
+}
+
+.bg-accent-custom{
+    background-color: var(--accent-custom);
+}
+
+.text-accent-custom{
+    color: var(--accent-custom);
+}
+
+.bg-first-custom{
+    background-color: var(--dark-custom);
+}
+
+.text-dark-curstom{
+    color: var(--dark-custom);
+}
+
+.navbar{
+    transition: 0.3s;
+}
+
+.widthCustom{
+    width: 100px;
+}
+
+.logo{
+    width: 50px;
+}
+
+/*header*/
+
+.margin-top-custom{
+    margin-top: 100px;
+}
+
+.bg-hero{
+    height: 60vh;
+    background: linear-gradient(rgba(124,124,124,0.5), rgba(120,120,120,0.509)), url(./MediaP/SfondoNegozio.jpeg);
+    background-position: top;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.16) 0px 3px 6px, rgba(0,0,0,0.23) 0px 3px 6px;
+}
+
+.button-6{
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0,0,0,0.02) 0 1px 3px 0;
+    color: var(--white-custom);
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.button-6:hover,
+.button-6:focus{
+    border-color: rgba(0,0,0,0.15);
+    box-shadow: rgba(0,0,0,0.1) 0 4px 12px;
+    color: var(--white-custom)
+}
+
+.button-6:hover{
+    transform: translateY(-1px);
+}
+
+.button-6:active{
+    background-color: #F0F0F1;
+    border-color: rgba(0,0,0,0.15);
+    box-shadow: rgba(0,0,0,0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+.numbers-section{
+    height: 15vh;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.16) 0px 3px 6px, rgba(0,0,0,0.23) 0px 3px 6px;
+}
+
+.reviewCard{
+    min-height: 180px;
+    background-color: var(--white-custom);
+    border-radius: 15px;
+    box-shadow: rgba(0,0,0,0.16) 0px 3px 6px, rgba(0,0,0,0.23) 0px 3px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: var(--dark-custom);
+    color: var(--white-custom);
+}
+
+.card-custom{
+    height: 200px;
+    width: 30%;
+    border: 2px solid var(--grey-custom);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#cardWrapper{
+    height: 75vh;
+    overflow-y: scroll;
+}
