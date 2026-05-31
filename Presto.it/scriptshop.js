@@ -1,3 +1,23 @@
+let navbarColor = document.querySelector('.navbar-expand-lg')
+let linkColor = document.querySelectorAll('.linkColor')
+let logo_navbar = document.querySelector('#logo_navbar')
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 0){
+        navbarColor.style.backgroundColor = 'var(--dark-custom)'
+        linkColor.forEach((navLink) => {
+            navLink.style.color = 'var(--white-custom)'
+        })
+        logo_navbar.src = './MediaP/LogoBianco.png'
+    }else{
+        navbarColor.style.backgroundColor = 'transparent'
+        linkColor.forEach((navLink) => {
+            navLink.style.color = 'var(--dark-custom)'
+        }) 
+        logo_navbar.src = './MediaP/LogoBlu.png'
+    }
+})
+
 fetch('./shop.json')
 .then((response) => response.json())
 .then((data) => {
@@ -40,10 +60,7 @@ fetch('./shop.json')
 
     showCards(data);
     
-    let radios = document.querySelectorAll('.form-check-input');
-    let priceInput = document.querySelector('#priceInput');
-    let priceRange = document.querySelector('#priceRange');
-
+  
     function filterByCategory(array){
     let arrayFromNodeList = Array.from(radios);
     let button = arrayFromNodeList.find((button) => button.checked);
@@ -56,7 +73,10 @@ fetch('./shop.json')
     }
     }
 
-
+    let radios = document.querySelectorAll('.form-check-input');
+    let priceInput = document.querySelector('#priceInput');
+    let priceRange = document.querySelector('#priceRange');
+    
     radios.forEach((button) => {
     button.addEventListener('click', () =>{
         showCards(filterByCategory(data))
@@ -87,10 +107,10 @@ fetch('./shop.json')
 
     function globalFilter(){
     let filteredByWord = filterByWord(data);
-    let filteredByPrice = filterByPrice(filterByWord);
-    let filteredByCategory = filterByCategory(filterByPrice);
+    let filteredByPrice = filterByPrice(filteredByWord);
+    let filteredByCategory = filterByCategory(filteredByPrice);
 
-    showCards(filterByCategory);
+    showCards(filteredByCategory);
     }
 
     radios.forEach((button) => {

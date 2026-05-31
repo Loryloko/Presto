@@ -3,6 +3,10 @@
   font-family: "Rubik", sans-serif;
 }
 
+body{
+    background-color: var(--grey-custom);
+}
+
 :root{
     --dark-custom: #1D242D;
     --grey-custom: rgb(132, 130, 128);
@@ -114,12 +118,23 @@
     margin: 0 auto;
 }
 
+#accordionExample .accordion-button.collapsed{
+    background-color: var(--dark-custom);
+    color: var(--white-custom);
+}
+
+#accordionExample .accordion-item{
+    background-color: var(--dark-custom);
+    color: var(--white-custom);
+}
+
 .accordion-button:not(.collapsed){
     background-color: var(--dark-custom);
     color: var(--white-custom);
 }
 
 .card-custom{
+    background-color: var(--white-custom);
     height: 200px;
     width: 30%;
     border: 2px solid var(--grey-custom);
